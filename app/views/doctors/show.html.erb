@@ -1,0 +1,7 @@
+<h1><%= @doctor.name %></h1>
+
+<ul>
+<li><%= link_to 'Schedule Appointment', new_doctor_appointment_path(@doctor.id)%></li>
+<li><%= link_to 'Doctor Info', new_doctor_path %></li>
+</ul>
+
