@@ -2,6 +2,8 @@
 
 <ul>
 <li><%= link_to 'Schedule Appointment', new_doctor_appointment_path(@doctor.id)%></li>
-<li><%= link_to 'Doctor Info', new_doctor_path %></li>
 </ul>
+
+<%= link_to "Edit Doctor", edit_doctor_path %>
+<%= link_to "Delete Doctor", @doctor, method: :delete %>
 

@@ -1,5 +1,8 @@
-<h1>Information</h1>
-<p>Doctors name</p>
-<br/>
-<p>Doctors Credentials</p>
-<p>Phone Number</p>
+<h1>Add Doctor</h1>
+<%= form_for @doctor do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit %>
+<% end %>
+

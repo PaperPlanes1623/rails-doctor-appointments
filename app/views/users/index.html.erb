@@ -1,2 +1,11 @@
-<h1>User Page</h1>
-<%= link_to 'List Of Doctors', doctors_path %>
+<h1>DevPoint Health</h1>
+<%= link_to 'Log In', new_user_path %>
+<h2>Users: </h2>
+<ul>
+<li>
+ <%= @user %>
+</li>
+</ul>
+
+<br/>
+<%= link_to "List of Doctors", doctors_path %>

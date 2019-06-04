@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :set_doctor
-  before_action :set_appointment, only: [:show, :edit, :delete]
+  before_action :set_appointment, only: [:show, :edit, :destroy, :update]
   def index
     @appointments = @doctor.appointments
   end
@@ -19,13 +19,21 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = @doctor.appointments.new(appointment_params)
     if @appointment.save
-      redirect_to @appointment
+      redirect_to doctor_appointments_path
     else
       render :new
     end
   end
 
-  def delete
+  def update
+    if @appointment.update(appointment_params)
+      redirect_to doctor_appointments_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
     @doctor.appointments.destroy
   end
 
