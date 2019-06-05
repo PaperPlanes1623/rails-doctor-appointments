@@ -1,11 +1,13 @@
 <h1>DevPoint Health</h1>
 <%= link_to 'Log In', new_user_path %>
 <h2>Users: </h2>
+<% @users.each do |user| %>
 <ul>
 <li>
- <%= @user %>
+ <%= link_to user.name, user_path(user.id) %>
 </li>
 </ul>
+<% end %>
 
 <br/>
 <%= link_to "List of Doctors", doctors_path %>

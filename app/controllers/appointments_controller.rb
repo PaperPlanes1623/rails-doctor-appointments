@@ -6,7 +6,6 @@ class AppointmentsController < ApplicationController
   end
 
   def new
-    @drs = Doctor.all
     @appointment = @doctor.appointments.new
   end
 
@@ -18,7 +17,7 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = @doctor.appointments.new(appointment_params)
-    if @appointment.save
+    if @doctor.appointments.save
       redirect_to doctor_appointments_path
     else
       render :new
