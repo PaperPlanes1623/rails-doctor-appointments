@@ -1,12 +1,16 @@
-<h1>Create User</h1>
-<%= form_for @user do |f|%>
-  <%= f.label :name %>
-  <%= f.text_field :name%>
+<div class = "user-form">
+  <h1>Create User</h1>
+  <%= form_for @user do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+    </br></br>
 
-  <%= f.label :phone %>
-  <%= f.text_field :phone %>
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+    </br></br>
 
-  <%= f.submit%>
-<% end %>
+    <%= f.submit%>
+  <% end %>
+</div>
 
 

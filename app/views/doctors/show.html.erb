@@ -1,4 +1,7 @@
 <h1><%= @doctor.name %></h1>
+<br/>
+<img src="/assets/doctor.jpg" class="img-fluid" alt="Doctor">
+</br>
 
 <ul>
 <li><%= link_to 'Schedule Appointment', new_doctor_appointment_path(@doctor.id)%></li>

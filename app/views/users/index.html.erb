@@ -1,13 +1,23 @@
-<h1>DevPoint Health</h1>
-<%= link_to 'Log In', new_user_path %>
-<h2>Users: </h2>
-<% @users.each do |user| %>
-<ul>
-<li>
- <%= link_to user.name, user_path(user.id) %>
-</li>
-</ul>
-<% end %>
+<div class = "index">
+<div class = "header">
+  <h1><strong>DevPoint Health</strong></h1>
+</div>
+  <%= link_to 'Log In', new_user_path %>
+  <br/><br/><br/><br/><br/><br/>
+  <div class ="users"
+    <h2> Active Users: </h2>
+    <% @users.each do |user| %>
+    <ul>
+    <li>
+    <%= link_to user.name, user_path(user.id) %>
+    </li>
+    </ul>
+    <% end %>
+  </div>
+  <br/><br/><br/><br/>
 
-<br/>
-<%= link_to "List of Doctors", doctors_path %>
+  <div class = "doctor-list"
+  <br/>
+  <%= link_to "List of Doctors", doctors_path %>
+  </div>
+</div>
