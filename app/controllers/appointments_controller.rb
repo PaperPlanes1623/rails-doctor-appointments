@@ -34,6 +34,7 @@ class AppointmentsController < ApplicationController
 
   def destroy
     @doctor.appointments.destroy
+    redirect_to doctor_appointments_path
   end
 
   private
