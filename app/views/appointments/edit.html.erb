@@ -1,0 +1,16 @@
+<h1>Edit Appointment Date</h1>
+<%= form_for [@doctor, @appointment] do |f| %>
+  <%= f.label :date %>
+  <%= f.text_field :date%>
+  <br/><br/>
+
+  <%= f.label :user_id %>
+  <%= f.text_field :user_id, :readonly => true %>
+  <br/><br/>
+
+  <%= f.label :doctor_id %>
+  <%= f.text_field :doctor_id, :readonly => true %>
+  <br/><br/>
+
+  <%= f.submit %>
+<% end %>

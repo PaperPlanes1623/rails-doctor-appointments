@@ -4,12 +4,12 @@
   <%= f.text_field :date%>
   <br/><br/>
 
-  <%= f.label :user_id %>
+  <%= f.label :user_id, 'User Id Number' %>
   <%= f.text_field :user_id %>
   <br/><br/>
 
   <%= f.label :doctor_id %>
-  <%= f.text_field :doctor_id %>
+  <%= f.text_field :doctor_id, :readonly => true %>
   <br/><br/>
 
   <%= f.submit %>
