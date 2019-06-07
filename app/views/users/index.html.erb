@@ -9,7 +9,8 @@
     <% @users.each do |user| %>
     <ul>
     <li>
-    <%= link_to user.name, user_path(user.id) %>
+    <% user_info = "#{user.name}, id: #{user.id}"  %>
+    <%= link_to user_info, user_path(user.id) %>
     </li>
     </ul>
     <% end %>
